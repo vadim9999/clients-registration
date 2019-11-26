@@ -1,26 +1,37 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {addUser} from '../../actions/index'
+import { connect } from 'react-redux'
+import { addUser } from '../../actions/index'
 
-const mapDispatchToProps = (dispatch:any) =>{
-  return{
-    addUser: (user:object) =>dispatch(addUser(user))
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    addUser: (user: object) => dispatch(addUser(user))
+  }
+}
+
+const mapStateToProps = (state: { users: object[] }) => {
+  return {
+    users: state.users
   }
 }
 
 interface RegistrationUserProps {
-  addUser: any
+  addUser: any,
+  users: object[]
 }
 
-class ConnectedRegistrationUser extends React.Component<RegistrationUserProps,{}>{
+class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, {}>{
 
-  onClick = () =>{
+  onClick = () => {
     console.log("click");
-    this.props.addUser({id:7, name:"george" , time:"44"})
+    const { users } = this.props;
+    console.log("length", users.length);
+    
+    this.props.addUser({ id: users.length + 1, name: "george", time: "44" })
   }
 
-  render(){
-    return(
+  render() {
+    return (
+      
       <button onClick={this.onClick}>
         registrate
       </button>
@@ -28,5 +39,5 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps,{}
   }
 }
 
-const RegistrationUser = connect(null, mapDispatchToProps)(ConnectedRegistrationUser)
+const RegistrationUser = connect(mapStateToProps, mapDispatchToProps)(ConnectedRegistrationUser)
 export default RegistrationUser

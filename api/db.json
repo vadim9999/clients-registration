@@ -1,20 +1,17 @@
 {
   "clients": [
     {
-      "name": "jorge",
-      "date": "none"
+      "id": 1,
+      "name": "george",
+      "time": "44"
     },
     {
-      "id": 5,
-      "name": "Mark",
-      "createdAt": 1574783463649
+      "id": 2,
+      "name": "george",
+      "time": "44"
     },
     {
-      "id": 6,
-      "name": "Mark"
-    },
-    {
-      "id": 7,
+      "id": 3,
       "name": "george",
       "time": "44"
     }

@@ -12,7 +12,8 @@ const mapStateToProps =(state:{users:object[]}) =>{
 }
 
 interface ClientListProps {
-  users: object[]
+  users: object[];
+  getUsers: any
 }
 
 const columns = [
@@ -31,7 +32,11 @@ const columns = [
 
 
 class ConnectedClientList extends React.Component<ClientListProps, {} >{
-
+  
+  componentDidMount(){
+    console.log("component did mount");
+    // this.props.getUsers()
+  }
   getDataForTable = (users:object[]) =>{
     
 

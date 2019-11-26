@@ -19,7 +19,7 @@ function* addUserWorker(action: { type: string, payload: object }) {
     yield call(addUser, action.payload)
 
     yield put({ type: `${action.type}_SUCCESS` })
-
+    yield put({ type: `GET_USERS` })
   } catch (e) {
 
   }
@@ -30,6 +30,7 @@ function* getUsersWorker(action: { type: string }) {
     const result = yield call(getUsers)
 
     yield put({ type: `${action.type}_SUCCESS`, payload: result.data })
+    // yield put({ type: `GET_USERS` })
   }catch(e){
 
   }
