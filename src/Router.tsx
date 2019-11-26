@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 
 import RegistrationUser from './components/RegistrationUser/RegistrationUser'
 import { Layout } from 'antd';
@@ -11,6 +11,8 @@ const { Header, Footer, Sider, Content } = Layout;
 
 import ContentPage from './components/ContentPage/ContentPage'
 
+const ContentPageWithRouter = withRouter(ContentPage)
+
 class Router extends React.Component<{}, {}>{
 
   render() {
@@ -18,18 +20,13 @@ class Router extends React.Component<{}, {}>{
       <BrowserRouter>
 
         <Provider store={store}>
-          <Layout style={{ height: '100vh' }}>
-            <Header>Header</Header>
-            <Content>
-            <ContentPage />
-            </Content>
-            <Footer>Footer</Footer>
-          </Layout>
-
+          
+          <ContentPageWithRouter />
         </Provider>
       </BrowserRouter>
     )
   }
 }
+
 
 export default Router

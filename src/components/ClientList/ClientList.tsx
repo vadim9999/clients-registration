@@ -29,13 +29,25 @@ const columns = [
 ]
 
 
+
 class ConnectedClientList extends React.Component<ClientListProps, {} >{
+
+  getDataForTable = (users:object[]) =>{
+    
+
+    return users.map((user, index)=>{
+        return {
+          ...user,
+          key:index
+        }
+    })
+  }
 
   render() {
     
     
     return (
-      <Table columns = {columns} dataSource={this.props.users}/>
+      <Table columns = {columns} dataSource={this.getDataForTable(this.props.users)}/>
     )
   }
 }
