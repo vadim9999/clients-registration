@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "mock:api":"json-server --watch api/db.json --port 4000"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +36,9 @@
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "@types/react-redux": "^7.1.5",
+    "antd": "^3.25.3",
+    "json-server": "^0.15.1",
+    "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
