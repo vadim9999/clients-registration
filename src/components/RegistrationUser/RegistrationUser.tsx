@@ -16,7 +16,7 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps,{}
 
   onClick = () =>{
     console.log("click");
-    this.props.addUser({})
+    this.props.addUser({id:7, name:"george" , time:"44"})
   }
 
   render(){

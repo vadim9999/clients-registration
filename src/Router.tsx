@@ -9,6 +9,8 @@ import store from './store/index'
 import ClientList from './components/ClientList/ClientList'
 const { Header, Footer, Sider, Content } = Layout;
 
+import ContentPage from './components/ContentPage/ContentPage'
+
 class Router extends React.Component<{}, {}>{
 
   render() {
@@ -19,14 +21,7 @@ class Router extends React.Component<{}, {}>{
           <Layout style={{ height: '100vh' }}>
             <Header>Header</Header>
             <Content>
-              <Switch>
-                <Route exact path='/' component={ClientList} />
-                  
-              
-                <Route path='/registration' component={RegistrationUser}/>
-                  
-                  
-              </Switch>
+            <ContentPage />
             </Content>
             <Footer>Footer</Footer>
           </Layout>

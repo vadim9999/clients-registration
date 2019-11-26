@@ -6,9 +6,8 @@ export const addUser = (payload:object) =>{
   }
 }
 
-export const getUsers = (payload: object) =>{
+export const getUsers = () =>{
   return{
     type: 'GET_USERS',
-    payload
   }
 }
