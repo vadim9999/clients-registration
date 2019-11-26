@@ -1,12 +1,17 @@
 import React from 'react';
-
+import {Provider} from 'react-redux'
+import store from '../store/index'
 // import '../styles/index.css';
+import ClientList from './ClientList/ClientList'
 
 class App extends React.PureComponent {
 	render() {
 		return (
 			<div>
-				<h1>Hello World!</h1>
+        <Provider store={store}>
+          <ClientList />
+        </Provider>
+			  
 			</div>
 		);
 	}
