@@ -10,7 +10,10 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
   },
-
+  // fix react router dom
+  devServer:{
+    historyApiFallback: true,
+  },
   // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
   resolve: {
     extensions: ['.ts', '.tsx', '.js']

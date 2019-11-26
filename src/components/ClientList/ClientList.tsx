@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Divider, Tag } from 'antd';
-import data from './clients'
+// import data from './clients'
 interface ClientListProps {
 
 }
@@ -23,7 +23,7 @@ class ClientList extends React.Component<ClientListProps, {} >{
 
   render() {
     return (
-      <Table columns = {columns} dataSource={data}/>
+      <Table columns = {columns} dataSource={[]}/>
     )
   }
 }
