@@ -11,10 +11,8 @@ const { Header, Footer, Content } = Layout;
 
 
 const mapDispatchToProps = (dispatch: any) => {
-
   return {
     getUsers: () => dispatch(getUsers()),
-
   }
 }
 
@@ -56,13 +54,11 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
                 <Button onClick={() => history.push('/registration')}>RegisterUser</Button>
                 <Button style={stylesBtn} onClick={() => history.push('/')} >List all users</Button>
               </div>
-
                 )
             )}
           <div>
             <Button onClick={() => history.push('/about')}>About</Button>
           </div>
-
         </Header>
         <Content >
           <Switch>
@@ -73,7 +69,6 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
         </Content>
         <Footer style={{ display: 'flex', justifyContent: 'center' }}><p>2019</p></Footer>
       </Layout>
-
     )
   }
 }

@@ -1,27 +1,27 @@
 const initialState = {
   users: [],
-  date:''
-}
+  date: ''
+};
 
-const rootReducer = (state = initialState, action:any) =>{
+const rootReducer = (state = initialState, action: any) => {
 
-    switch (action.type) {
-      case 'GET_USERS_SUCCESS':
-          return {
-            ...state,
-            users: [...action.payload]
-          }
-      
-      case 'GET_DATE_SUCCESS':
-        return{
-          ...state,
-          date:action.payload
-        }
-    
-      default:
-        return state;
-    }
-    
-}
+  switch (action.type) {
+    case 'GET_USERS_SUCCESS':
+      return {
+        ...state,
+        users: [...action.payload]
+      };
 
-export default rootReducer
+    case 'GET_DATE_SUCCESS':
+      return {
+        ...state,
+        date: action.payload
+      };
+
+    default:
+      return state;
+  }
+
+};
+
+export default rootReducer;

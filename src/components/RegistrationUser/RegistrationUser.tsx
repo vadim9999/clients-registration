@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser, getDate } from '../../actions/index'
-import { Form, Input, Select, Button,Row,Col } from 'antd'
+import { Form, Input, Select, Button, Row, Col } from 'antd'
 
 const { Option } = Select;
 
@@ -91,7 +91,6 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
         gender: value
       })
     }
-
   }
 
   handleSelectChangeLoyalty = (value: any) => {
@@ -112,13 +111,9 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
   render() {
     const { date } = this.props;
 
-    let dateItem = {
-      labelCol: { span: 4 },
-      wrapperCol: { span: 5 }
-    }
     return (
-      <div style={{ marginTop:'20px'}}>
-        
+      <div style={{ marginTop: '20px' }}>
+
         <Row type="flex" justify='center' >
           <Col span={14}>
             <Form labelCol={{ span: 10 }} wrapperCol={{ span: 24 }} onSubmit={this.onClick}>
@@ -130,15 +125,12 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
               </Form.Item>
               <Form.Item {...formItemLayout} label="Gender">
                 <Select
-
                   style={{ width: 200 }}
                   placeholder="Select a gender" onChange={this.handleSelectChange}>
                   <Option value="male">male</Option>
                   <Option value="female">female</Option>
                 </Select>
               </Form.Item>
-
-
               <Form.Item {...formItemLayout} label="Loyalty program">
                 <Select
                   defaultValue='unavailable'
@@ -147,9 +139,7 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
                 >
                   <Option value="unavailable">Unavailable</Option>
                   <Option value='plasticCard'>Plastic card</Option>
-
                 </Select>
-
               </Form.Item>
               <Form.Item  {...formItemLayout} style={{ display: this.state.displayNumberInput }} label="Input number plastic card">
                 <Input name="numberCard" onChange={this.onChange}></Input>
@@ -160,18 +150,13 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
                   Submit
           </Button>
               </Form.Item>
-              <Form.Item  labelCol={{span:4}} wrapperCol={{span:8}} label="Date" >
-
-                <span>{date != undefined ? (date.slice(0,50)) : ''}</span>
+              <Form.Item labelCol={{ span: 4 }} wrapperCol={{ span: 8 }} label="Date" >
+                <span>{date != undefined ? (date.slice(0, 50)) : ''}</span>
               </Form.Item>
-
             </Form>
           </Col>
         </Row>
-
-
       </div>
-
     )
   }
 }

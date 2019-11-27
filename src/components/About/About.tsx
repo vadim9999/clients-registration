@@ -9,7 +9,6 @@ class About extends React.Component<{}, {}>{
           <h3 style={{ textAlign: 'center' }}>About author</h3>
           <p>This project created by Vadim Putrov. <br />ReactJS Developer</p>
         </div>
-
       </div>
     )
   }

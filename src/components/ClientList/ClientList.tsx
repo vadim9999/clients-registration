@@ -2,9 +2,7 @@ import React from 'react';
 import { Table, Row, Col } from 'antd';
 import { connect } from 'react-redux'
 
-
 const mapStateToProps = (state: { users: object[] }) => {
-
   return {
     users: state.users
   }
@@ -34,8 +32,6 @@ const columns = [
   }
 ]
 
-
-
 class ConnectedClientList extends React.Component<ClientListProps, {}>{
 
   getDataForTable = (users: object[]) => {
@@ -48,8 +44,6 @@ class ConnectedClientList extends React.Component<ClientListProps, {}>{
   }
 
   render() {
-
-
     return (
       <div style={{ marginTop: '25px' }}>
         <Row type="flex" justify="center" >
@@ -57,7 +51,6 @@ class ConnectedClientList extends React.Component<ClientListProps, {}>{
             <Table columns={columns} dataSource={this.getDataForTable(this.props.users)} />
           </Col>
         </Row>
-
       </div>
     )
   }
