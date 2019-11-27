@@ -25,7 +25,7 @@ interface RegistrationUserProps {
   getDate:any;
   users: object[],
   history: any;
-  date: object;
+  date: any;
 }
 
 interface RegistrationUserState {
@@ -110,9 +110,12 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
     }
   }
   render() {
+    const {date} = this.props;
     
-  
-    
+    let dateItem = {
+      labelCol: {span:4}, 
+      wrapperCol:{span:5}
+    }
     return (
       <div>
         <Form labelCol={{span:5}} wrapperCol={{span:12}} onSubmit={this.onClick}>
@@ -154,6 +157,11 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
             Submit
           </Button>
         </Form.Item>
+        <Form.Item labelCol = {{span:4}} wrapperCol={{span:8}} label="Date" >
+
+          <span>{date != undefined ?(date):''}</span>
+        </Form.Item>
+        
         </Form>
 
       </div>

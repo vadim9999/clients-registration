@@ -1,6 +1,6 @@
 const initialState = {
   users: [],
-  date:{}
+  date:''
 }
 
 const rootReducer = (state = initialState, action:any) =>{
