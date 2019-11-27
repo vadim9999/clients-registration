@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Divider, Tag } from 'antd';
+import { Table, Divider, Tag, Row, Col } from 'antd';
 // import data from './clients'
 import {connect} from 'react-redux'
 
@@ -57,7 +57,15 @@ class ConnectedClientList extends React.Component<ClientListProps, {} >{
     
     
     return (
-      <Table columns = {columns} dataSource={this.getDataForTable(this.props.users)}/>
+      <div style={{marginTop:'25px'}}>
+        <Row type="flex" justify="center" >
+          <Col span={12}>
+            <Table columns = {columns} dataSource={this.getDataForTable(this.props.users)}/>
+          </Col>
+        </Row>
+          
+      </div>
+      
     )
   }
 }

@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import { Layout, Button } from 'antd';
 import { connect } from 'react-redux'
 import { getUsers, getDate } from '../../actions'
+import About from '../About/About'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -23,6 +24,12 @@ interface ContentPageProps {
   location:any,
   history: any
 }
+
+const stylesBtn = {
+  marginLeft:'15px',
+  
+}
+
 class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
 
   componentDidMount = () => {
@@ -43,23 +50,32 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
     
     return (
       <Layout style={{ height: '100vh' }}>
-        <Header>
+        <Header style={{display:'flex', justifyContent:'space-between'}}>
 
       
           
           {location.pathname === '/' ? (
+            <div >
               <Button onClick={()=> history.push('/registration')}>RegisterUser</Button>
+            </div>
+              
           ):(
             location.pathname === '/registration' ? (
-              <Button onClick={()=>history.push('/')}>List all users</Button>
+              <div>
+                <Button  onClick={()=>history.push('/')}>List all users</Button>
+              </div>
+              
             ):(<div>
                <Button onClick={()=>history.push('/registration')}>RegisterUser</Button>
-              <Button onClick={()=> history.push('/')} >List all users</Button>
+              <Button style={stylesBtn} onClick={()=> history.push('/')} >List all users</Button>
             </div>
            
             )
           )}
-          <Button onClick={()=> history.push('/')}>About</Button>
+          <div>
+            <Button onClick={()=> history.push('/about')}>About</Button>
+          </div>
+          
         </Header>
         <Content>
           <Switch>
@@ -67,11 +83,11 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
 
 
             <Route path='/registration' component={RegistrationUser} />
-
+            <Route path = '/about' component={About} />
 
           </Switch>
         </Content>
-        <Footer>Footer</Footer>
+        <Footer style={{display:'flex', justifyContent:'center'}}><p>2019</p></Footer>
       </Layout>
 
 
