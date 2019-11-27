@@ -9,6 +9,7 @@
 - Webpack
 - Axios
 - json server
+- Ant Design
 
 ## Starting project
 
