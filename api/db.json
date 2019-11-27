@@ -1,53 +1,5 @@
 {
   "clients": [
-    {
-      "id": 1,
-      "name": "george",
-      "time": "44"
-    },
-    {
-      "id": 2,
-      "name": "george",
-      "time": "44"
-    },
-    {
-      "id": 3,
-      "name": "george",
-      "time": "44"
-    },
-    {
-      "id": 4,
-      "name": "george",
-      "time": "44"
-    },
-    {
-      "id": 5,
-      "name": "george",
-      "time": "44"
-    },
-    {
-      "firstName": "Miron",
-      "lastName": "Dorn",
-      "gender": "male",
-      "id": 6,
-      "time": "44"
-    },
-    {
-      "firstName": "Miron",
-      "lastName": "dddd",
-      "gender": "male",
-      "id": 7,
-      "date": "44"
-    },
-    {
-      "firstName": "fff",
-      "lastName": "dfd",
-      "gender": "male",
-      "loyaltyProgram": "plasticCard",
-      "numberCard": "",
-      "displayNumberInput": "",
-      "id": 8,
-      "date": "44"
-    }
+    
   ]
 }
