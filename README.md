@@ -31,7 +31,7 @@ npm start
 ```
 
 Then open this link: 
-http:localhost:8080
+localhost:8080
 
 ## Screenshots
 
