@@ -1,5 +1,14 @@
 {
   "clients": [
-    
+    {
+      "firstName": "Test",
+      "lastName": "Test",
+      "gender": "male",
+      "loyaltyProgram": "plasticCard",
+      "numberCard": "12345",
+      "displayNumberInput": "",
+      "id": 1,
+      "date": "You gotta be kitten me! are you sure you want to unsubscribe? send YES or NO"
+    }
   ]
 }

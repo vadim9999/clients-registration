@@ -41,7 +41,7 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
 
           {location.pathname === '/' ? (
             <div >
-              <Button onClick={() => history.push('/registration')}>RegisterUser</Button>
+              <Button onClick={() => history.push('/registration')}>Register user</Button>
             </div>
 
           ) : (
@@ -51,7 +51,7 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
                 </div>
 
               ) : (<div>
-                <Button onClick={() => history.push('/registration')}>RegisterUser</Button>
+                <Button onClick={() => history.push('/registration')}>Register user</Button>
                 <Button style={stylesBtn} onClick={() => history.push('/')} >List all users</Button>
               </div>
                 )

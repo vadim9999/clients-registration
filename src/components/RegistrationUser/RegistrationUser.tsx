@@ -77,15 +77,12 @@ class ConnectedRegistrationUser extends React.Component<RegistrationUserProps, R
   }
 
   onChange = (e: any) => {
-    console.log(e.target.value);
-
     this.setState({
       [e.target.name]: e.target.value
     })
   }
 
   handleSelectChange = (value: any) => {
-    console.log("gender", value);
     if (value !== undefined) {
       this.setState({
         gender: value
