@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "check-types": "tsc",
-    "mock:api": "json-server --watch api/db.json --no-cors --port 4000"
+    "mock:api": "json-server --watch api/db.json  --port 4000"
   },
   "keywords": [],
   "author": "",

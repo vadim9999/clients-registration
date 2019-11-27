@@ -4,7 +4,7 @@ import ClientList from '../ClientList/ClientList'
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import { Layout, Button } from 'antd';
 import { connect } from 'react-redux'
-import { getUsers } from '../../actions'
+import { getUsers, getDate } from '../../actions'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -12,12 +12,14 @@ const { Header, Footer, Sider, Content } = Layout;
 const mapDispatchToProps = (dispatch: any) => {
 
   return {
-    getUsers: () => dispatch(getUsers())
+    getUsers: () => dispatch(getUsers()),
+
   }
 }
 
 interface ContentPageProps {
   getUsers: any;
+ 
   location:any,
   history: any
 }
@@ -25,6 +27,7 @@ class ConnectedContentPage extends React.Component<ContentPageProps, {}>{
 
   componentDidMount = () => {
     this.props.getUsers()
+    
   }
 
 

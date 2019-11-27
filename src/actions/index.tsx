@@ -11,3 +11,9 @@ export const getUsers = () =>{
     type: 'GET_USERS',
   }
 }
+
+export const getDate = () =>{
+  return {
+    type: 'GET_DATE'
+  }
+}

@@ -1,5 +1,6 @@
 const initialState = {
-  users: []
+  users: [],
+  date:{}
 }
 
 const rootReducer = (state = initialState, action:any) =>{
@@ -12,7 +13,12 @@ const rootReducer = (state = initialState, action:any) =>{
             ...state,
             users: [...action.payload]
           }
-        
+      
+      case 'GET_DATE_SUCCESS':
+        return{
+          ...state,
+          date:action.payload
+        }
     
       default:
         return state;

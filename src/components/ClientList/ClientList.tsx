@@ -18,9 +18,14 @@ interface ClientListProps {
 
 const columns = [
   {
-    title:'Name',
-    dataIndex:'name',
-    key:'name'
+    title:'First Name',
+    dataIndex:'firstName',
+    key:'firstName'
+  },
+  {
+    title: 'Last Name',
+    dataIndex: 'lastName',
+    key:'lastName'
   },
   {
     title: 'Registration date',
