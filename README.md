@@ -31,7 +31,7 @@ npm start
 ```
 
 Then open this link: 
-<a  href="localhost:8080">localhost:8080</a>
+[localhost:8080](localhost:8080)
 
 ## Screenshots
 
