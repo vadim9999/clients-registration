@@ -13,21 +13,23 @@
 ## Starting project
 
 To run this project use this commands:
-Make install of all npm modules
+
+1. Install of all npm modules
 ```
 npm install
 ```
 
-Open terminal and run mock database(json server):
+2. Open terminal and run mock database(json server):
 
 ```
 npm run mock:api
 ```
-Open another terminal and run project:
+3. Open another terminal and run project:
 
 ```
 npm start
 ```
+
 Then open this link: 
 <a  href="localhost:8080">localhost:8080</a>
 
@@ -35,15 +37,15 @@ Then open this link:
 
 Displays client list
 
-<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/sorted_by_growth_date.png">
+<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/screenshot1.png">
 
 Displays the form of registration a user
 
-<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/sorted_by_growth_date.png">
+<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/screenshot2.png">
 
 Displays page about author
 
-<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/sorted_by_growth_date.png">
+<img src="https://github.com/vadim9999/clients-registration/blob/master/screenshots/screenshot3.png">
 
 All data that uses json server are stored in `api/db.json`
 
